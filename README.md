@@ -2,7 +2,7 @@
 
 <h2>개발환경</h2>
 <ul>
- <li>IDE : IntelliJ IDEA Ultimate</li>
+ <li>IDE : IntelliJ IDEA </li>
  <li>Git Tools : Source Tree</li>
  <li>OS : Mac OS X</li>
  <li>SpringBoot 1.5.9</li>
@@ -31,4 +31,6 @@
    -> JPARepository를 이용해 가져온 후  Posts Entit에 담아 PostsMainResponseDto로 변환하는 방법을 생각 못함<br>
    -> 사용할 메소드 안에 PostsMainResponseDto 객체를 생성하여 파라미터에 가져온 Posts Entity를 담아주어 해결<br>
      + 게시글 한개 불러오기 추후업데이트 예정 PostsRepository, PostsService 완성 Contorller 수정필요<br> 
+   <li>2023. 02. 25</li>
+   ※개인정보가 들어있어 히스토리 초기화※
 </ul> 
