@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: local
+
+# local
+---
+spring:
+  profiles: local
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+  mail:
+    host: smtp.gmail.com #smtp.naver.com 는 error 발생
+    username: email
+    password: password #yml을 사용할 경우 비밀번호에 특수문자가 들어가면 따옴표로 감싸 주어야 하고 properties에선 감싸주지 않아도 된다.
+    port: 587
+    properties:
+      mail:
+        protocol: smtps
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true

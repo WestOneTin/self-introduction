@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Guest Trace</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <a href="/"><span class="icon fa-diamond"></span></a>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <blockquote> Trace에 방문해주셔서 감사합니다. 방명록을 남겨주시면 관리자가 글을 확인할 수 있습니다. </blockquote>
+                    <ul class="actions">
+                        <li><a href="#savePostsModal" class="button small">글 등록</a></li>
+                    </ul>
+                    <br/>
+                    <br/>
+                        <div class="table-wrapper">
+                            {{!-- 목록 출력 영역 --}}
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>게시글번호</th>
+                                    {{!--<th>제목</th>--}}
+                                    <th>내용</th>
+                                    <th>작성자</th>
+                                    <th>최종수정일</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each posts}}
+                                        <tr>
+                                            <td>{{id}}</td>
+                                            {{!--<td>{{title}}}</td>--}}
+                                            <td>{{content}}</a></td>
+                                            <td>{{author}}</td>
+                                            <td>{{modifiedDate}}</td>
+                                        </tr>
+                                    {{/each}}
+                                    <tr>
+                                        <td>0</td>
+                                        {{!--<td>제목</td>--}}
+                                        <td>테스트 내용 입니다.</td>
+                                        <td>관리자</td>
+                                        <td>2019-05-21 05:23:16</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </header>
+
+        {{!-- Modal 영역 --}}
+        <div id="main">
+            <article id="savePostsModal" role="dialog" aria-labelledby="savePostsLabel" aria-hidden="true">
+                <section >
+                    <form>
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="author">작성자</label>
+                                <input type="text" name="author" id="author" />
+                            </div>
+                            <div class="field half">
+                                <label for="password">비밀번호</label>
+                                <input type="password" name="password" id="password"  />
+                            </div>
+                            <div class="field">
+                                <label for="title">제목</label>
+                                <input type="text" name="title" id="title"  />
+                            </div>
+                            <div class="field">
+                                <label for="content">내용</label>
+                                <textarea name="content" id="content" rows="6"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <button type="submit" class="primary" id="btn-save">Write</button>
+                        <button type="reset" >Rest</button>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </div>{{!-- div main end--}}
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    {{!--custom js 추가--}}
+    <script src="/js/app/guest.js"></script>
+
+</body>
+</html>
